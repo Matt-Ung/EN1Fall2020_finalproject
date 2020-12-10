@@ -2,6 +2,22 @@
   <script src="https://cdn.jsdelivr.net/gh/tuftsceeo/SPIKE-Web-Interface/cdn/ServiceDock.js" charset="utf-8"></script>
   <script src="airtable_script.js" charset="utf-8"></script>
   <link rel="stylesheet" href="style.css" />
+  <style>
+  .button1 {
+    width: 100px;
+    height: 200px;
+  }
+  .button2 {
+    width: 50px;
+    height: 200px;
+    border-radius: 8px;
+  }
+  .button3 {
+    width: 200px;
+    height: 100px;
+    border-radius: 10px;
+  }
+  </style>
 </head>
 <body type="remote">
 
@@ -16,9 +32,9 @@
 
 
   <p>Control the Robot</p>
-  <button airtable_value='action'>Forward</button>
-  <button airtable_value='action'>Backward</button>
-  <button airtable_value='action'>Backward</button>
+  <button class="button1" airtable_value='action'>Forward</button>
+  <button class="button2" airtable_value='action'>Backward</button>
+  <button class="button3" airtable_value='action'>Backward</button>
   <button airtable_value='action'>Stop</button>
 
 </body>
