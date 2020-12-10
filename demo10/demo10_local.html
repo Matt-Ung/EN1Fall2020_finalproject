@@ -8,8 +8,8 @@
 		<script>
 			// custom JavaScript function
 			// - value_val will be the data passed in (e.g. motor speed)
-			function update_motor_speed (name, value) {
-				mySPIKE.Motor('A').start(value); // start motor
+			function update_horizontal_position (name, value) {
+				mySPIKE.Motor('F').run_to_position(value, 20); // start motor
 			}
 		</script>
 	</head>
@@ -17,7 +17,7 @@
 
 	<!-- SERVICE DOCK -->
 	<div id="servicedock">
-		<service-airtable id="service_airtable" tablename="demo10"></service-airtable>
+		<service-airtable id="service_airtable" tablename="demo13"></service-airtable>
 		<service-spike id="service_spike"></service-spike>
 	</div>
 
@@ -31,8 +31,8 @@
 		<b><em>Monitor Cloud:</em></b>
 
 	  <div type="cloud_check" cloud_compare="changes" cloud_action="run_js">
-			<input type=text id="cloud_name" value="motor_speed">
-      <input type=text id="cloud_action_val" value="update_motor_speed">
+			<input type=text id="cloud_name" value="position_Rotation">
+      <input type=text id="cloud_action_val" value="update_horizontal_position">
     </div>
 
 	</div>
