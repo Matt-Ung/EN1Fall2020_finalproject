@@ -13,8 +13,8 @@
 				if (value==NaN){
 					value=0;
 				}
-
-				mySPIKE.Motor('F').run_for_degrees(((Motor('F').get_position) - parseInt(value)), 10); // start motor
+				var current=mySPIKE.Motor('F').get_position
+				mySPIKE.Motor('F').run_for_degrees((parseInt(value)-current), 10); // start motor
 			}
 		</script>
 	</head>
