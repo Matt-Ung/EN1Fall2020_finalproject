@@ -13,7 +13,7 @@
 				if (value==NaN){
 					value=0;
 				}
-				mySPIKE.Motor('F').run_to_position(parseInt(value), 10); // start motor
+				mySPIKE.Motor('B').run_to_position(parseInt(value), 10); // start motor
 			}
 		</script>
 	</head>
@@ -47,10 +47,10 @@
 from spike import PrimeHub, Motor
 from spike.control import wait_for_seconds
 
-v_motor= Motor('D')
-v_motor.run_to_position(100, 'shortest path', CLOUD[position_Power])
-v_motor.run_to_position(40, 'shortest path', 20)
-
+v_motor = Motor('D')
+v_motor.run_to_position(100,'shortest path',CLOUD[position_Power])
+v_motor.run_to_position(40,'shortest path', 20)
+h_motor.run_to_position(0,'shortest path', 20)
 
 </textarea>
 			<input type=text id="cloud_reset" value="">
